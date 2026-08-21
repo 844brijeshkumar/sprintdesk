@@ -214,7 +214,7 @@ export function Sidebar({ isOpenMobile, onCloseMobile }: SidebarProps) {
                     {displayName}
                   </p>
                   <p className="text-[11px] text-slate-400 dark:text-slate-500 truncate capitalize">
-                    {user?.role || 'admin'}
+                    {userRole}
                   </p>
                 </div>
               </div>
