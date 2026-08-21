@@ -1,0 +1,261 @@
+{
+  "sprint": {
+    "id": "sprint-24",
+    "name": "Sprint 24: Real-time Collaboration & Auth",
+    "goal": "Deliver hardened enterprise auth flow, real-time board sync, and burndown analytics dashboard.",
+    "startDate": "2026-08-10T09:00:00.000Z",
+    "endDate": "2026-08-24T18:00:00.000Z",
+    "totalPoints": 42
+  },
+  "users": [
+    {
+      "id": "u-1",
+      "name": "Emily Johnson",
+      "username": "emilys",
+      "email": "emily.johnson@sprintdesk.io",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+      "role": "Lead Frontend Architect",
+      "department": "Engineering"
+    },
+    {
+      "id": "u-2",
+      "name": "Alex Rivera",
+      "username": "arivera",
+      "email": "alex.rivera@sprintdesk.io",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "role": "Senior Fullstack Engineer",
+      "department": "Engineering"
+    },
+    {
+      "id": "u-3",
+      "name": "Sophia Chen",
+      "username": "schen",
+      "email": "sophia.chen@sprintdesk.io",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "role": "Product Designer",
+      "department": "Product"
+    },
+    {
+      "id": "u-4",
+      "name": "Marcus Vance",
+      "username": "mvance",
+      "email": "marcus.vance@sprintdesk.io",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "role": "QA & DevOps Engineer",
+      "department": "Engineering"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-101",
+      "title": "Implement in-memory Axios 401 token refresh queue",
+      "description": "Ensure concurrent requests hitting 401 are held in a Promise queue while a single refresh token request resolves with DummyJSON auth endpoint.",
+      "status": "in_progress",
+      "priority": "urgent",
+      "storyPoints": 5,
+      "assigneeId": "u-1",
+      "tags": ["Security", "Architecture", "Network"],
+      "createdAt": "2026-08-11T10:15:00.000Z",
+      "dueDate": "2026-08-16T18:00:00.000Z",
+      "comments": [
+        {
+          "id": "c-101-1",
+          "authorId": "u-2",
+          "content": "Ensure we reject the queue if the refresh token call returns 401 or invalid session.",
+          "createdAt": "2026-08-11T14:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "TASK-102",
+      "title": "Build @dnd-kit Kanban Board with collision detection",
+      "description": "Construct 4-column drag and drop sprint board utilizing Pointer and Keyboard sensors, rectIntersection collision, and optimistic Zustand store mutations.",
+      "status": "in_progress",
+      "priority": "urgent",
+      "storyPoints": 8,
+      "assigneeId": "u-1",
+      "tags": ["Kanban", "UI/UX", "DnD"],
+      "createdAt": "2026-08-11T11:00:00.000Z",
+      "dueDate": "2026-08-18T18:00:00.000Z",
+      "comments": [
+        {
+          "id": "c-102-1",
+          "authorId": "u-3",
+          "content": "Added drag handle indicator icon to cards to make draggable intent explicit on mobile.",
+          "createdAt": "2026-08-12T09:10:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "TASK-103",
+      "title": "Build Recharts Sprint Burndown & Status visualizations",
+      "description": "Connect Zustand board state directly to Recharts responsive containers for live burndown, status distribution, priority bars, and team workload.",
+      "status": "todo",
+      "priority": "high",
+      "storyPoints": 5,
+      "assigneeId": "u-2",
+      "tags": ["Analytics", "DataViz", "Recharts"],
+      "createdAt": "2026-08-12T08:30:00.000Z",
+      "dueDate": "2026-08-20T18:00:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "TASK-104",
+      "title": "Custom Design System: Accessible Dropdown and Portaled Modal",
+      "description": "Engineer accessible Select component with full keyboard navigation (ArrowUp/Down, Enter, Escape) and Modal/Drawer with focus trap and backdrop.",
+      "status": "done",
+      "priority": "high",
+      "storyPoints": 5,
+      "assigneeId": "u-3",
+      "tags": ["Design System", "a11y", "Tailwind"],
+      "createdAt": "2026-08-10T09:30:00.000Z",
+      "dueDate": "2026-08-14T18:00:00.000Z",
+      "comments": [
+        {
+          "id": "c-104-1",
+          "authorId": "u-1",
+          "content": "Tested ARIA roles role='listbox' and role='option'. Works smoothly with Screen Readers.",
+          "createdAt": "2026-08-13T16:45:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "TASK-105",
+      "title": "Real-time JSONPlaceholder Notification Poller & Diff Engine",
+      "description": "TanStack Query polling hook with refetchInterval that diffs incoming IDs with existing store IDs, firing toasts and updating unread badges.",
+      "status": "todo",
+      "priority": "medium",
+      "storyPoints": 3,
+      "assigneeId": "u-2",
+      "tags": ["Notifications", "Polling", "TanStack"],
+      "createdAt": "2026-08-13T10:00:00.000Z",
+      "dueDate": "2026-08-22T18:00:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "TASK-106",
+      "title": "End-to-end Vitest Test Suite for Stores & Interceptors",
+      "description": "Write isolated tests for useToast lifecycle, Zustand board store task transitions/CRUD, and Axios 401 interception retry flow.",
+      "status": "done",
+      "priority": "medium",
+      "storyPoints": 3,
+      "assigneeId": "u-4",
+      "tags": ["Testing", "Vitest", "RTL"],
+      "createdAt": "2026-08-10T14:00:00.000Z",
+      "dueDate": "2026-08-15T18:00:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "TASK-107",
+      "title": "Database indexing for Sprint Audit History logs",
+      "description": "Optimize composite indices on sprint_id and updated_at for fast query performance in retrospective reports.",
+      "status": "backlog",
+      "priority": "low",
+      "storyPoints": 2,
+      "assigneeId": "u-4",
+      "tags": ["Database", "Performance"],
+      "createdAt": "2026-08-14T11:20:00.000Z",
+      "dueDate": "2026-08-24T18:00:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "TASK-108",
+      "title": "Implement Dark / Light mode CSS variables and persistence",
+      "description": "Configure Tailwind darkMode 'class' strategy with local storage persistence and instant toggle transition.",
+      "status": "done",
+      "priority": "low",
+      "storyPoints": 2,
+      "assigneeId": "u-3",
+      "tags": ["Theme", "Tailwind", "UI"],
+      "createdAt": "2026-08-10T10:00:00.000Z",
+      "dueDate": "2026-08-12T18:00:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "TASK-109",
+      "title": "Automated Webhooks Integration for Slack Sprint Summaries",
+      "description": "Allow team leads to configure webhook URLs to post daily burndown status updates and completed tickets.",
+      "status": "backlog",
+      "priority": "medium",
+      "storyPoints": 5,
+      "assigneeId": "u-2",
+      "tags": ["Integration", "Webhooks"],
+      "createdAt": "2026-08-14T15:40:00.000Z",
+      "dueDate": "2026-08-24T18:00:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "TASK-110",
+      "title": "Side Drawer Portal with Slide-in Transition",
+      "description": "Slide-out panel rendered in portal-root providing deep task metadata editing, comments conversation, and delete action.",
+      "status": "done",
+      "priority": "high",
+      "storyPoints": 3,
+      "assigneeId": "u-1",
+      "tags": ["UI/UX", "Portals", "Drawer"],
+      "createdAt": "2026-08-11T16:00:00.000Z",
+      "dueDate": "2026-08-14T18:00:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "TASK-111",
+      "title": "Sprint Velocity Calculation & Estimations Engine",
+      "description": "Compute team velocity over previous 3 sprints to recommend ideal story point capacity for upcoming iterations.",
+      "status": "todo",
+      "priority": "medium",
+      "storyPoints": 3,
+      "assigneeId": "u-1",
+      "tags": ["Analytics", "Calculations"],
+      "createdAt": "2026-08-13T13:10:00.000Z",
+      "dueDate": "2026-08-21T18:00:00.000Z",
+      "comments": []
+    },
+    {
+      "id": "TASK-112",
+      "title": "Mobile Responsive Navigation & Bottom Action Bar",
+      "description": "Provide collapsible responsive sidebar for desktop and mobile drawer navigation with quick task creation.",
+      "status": "backlog",
+      "priority": "low",
+      "storyPoints": 3,
+      "assigneeId": "u-3",
+      "tags": ["Responsive", "Mobile", "Navigation"],
+      "createdAt": "2026-08-14T16:30:00.000Z",
+      "dueDate": "2026-08-24T18:00:00.000Z",
+      "comments": []
+    }
+  ],
+  "notifications": [
+    {
+      "id": 101,
+      "title": "Task assigned",
+      "message": "You have been assigned to 'Build Kanban board'.",
+      "type": "task",
+      "read": false,
+      "createdAt": "2026-08-19T11:10:00Z"
+    },
+    {
+      "id": 102,
+      "title": "Review requested",
+      "message": "A review has been requested for 'Create analytics dashboard'.",
+      "type": "review",
+      "read": false,
+      "createdAt": "2026-08-19T13:30:00Z"
+    },
+    {
+      "id": 103,
+      "title": "Task completed",
+      "message": "'Implement authentication flow' has been completed.",
+      "type": "task",
+      "read": true,
+      "createdAt": "2026-08-18T16:20:00Z"
+    },
+    {
+      "id": 104,
+      "title": "Review requested",
+      "message": "A review has been requested for 'Accessibility audit'.",
+      "type": "review",
+      "read": false,
+      "createdAt": "2026-08-19T14:00:00Z"
+    }
+  ]
+}
